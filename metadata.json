@@ -1,0 +1,6 @@
+{
+  "name": "Grupo Scorp",
+  "description": "Tecnologia e inteligência sob medida com o Sleek Interface design para acelerar vendas, automatizar processos e visualizar resultados.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

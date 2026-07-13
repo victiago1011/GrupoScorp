@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-scorp-navy: #4f46e5; /* Sleek Indigo-600 */
+  --color-scorp-navy-dark: #3730a3; /* Indigo-800 */
+  --color-surface-container: #e2e8f0; /* Slate-200 */
+  --color-surface-container-low: #f8fafc; /* Slate-50 main body background */
+  --color-surface-container-lowest: #ffffff; /* Pure white card style */
+  --color-surface-container-high: #f1f5f9; /* Slate-100 container high */
+  --color-surface-container-highest: #cbd5e1; /* Slate-300 elements */
+  --color-on-surface-muted: #64748b; /* Slate-500 text color */
+  --color-accent-glow: #818cf8; /* Indigo-400 glow */
+  --color-on-tertiary-container: #475569; /* Slate-600 */
+
+  --color-background: #f8fafc; /* Slate-50 background */
+  --color-on-surface: #1e293b; /* Slate-800 text color */
+
+  --font-sans: var(--font-sans), "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: var(--font-display), "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .active-glow {
+    box-shadow: 0 0 15px rgba(79, 70, 229, 0.4);
+  }
+  .glass-header {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  .bento-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .bento-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  }
+}
+
+
