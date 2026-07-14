@@ -1,4 +1,5 @@
 import { BarChart3, Check, Globe, Wrench } from "lucide-react";
+import { contactCta } from "@/data/navigation";
 import { homeServices } from "@/data/services";
 
 const primaryIcons = {
@@ -91,10 +92,10 @@ export function SolutionsSection() {
 
         <div className="mt-10 flex justify-center">
           <a
-            href="#contato"
+            href={contactCta.href}
             className="border border-outline-variant px-8 py-3.5 rounded-full font-sans text-xs font-bold uppercase tracking-wider text-center bg-white/70 backdrop-blur-sm hover:bg-surface-container hover:border-scorp-navy/20 transition-all duration-200 text-scorp-navy"
           >
-            Conversar sobre meu projeto
+            {contactCta.label}
           </a>
         </div>
       </div>

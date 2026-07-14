@@ -36,7 +36,7 @@ export function HeroSection() {
               className="bg-scorp-navy text-white px-8 py-4 rounded-full font-sans text-sm font-bold uppercase tracking-wider text-center hover:scale-105 hover:bg-scorp-navy/95 hover:shadow-lg transition-all duration-200 shadow-md"
               href="#contato"
             >
-              Solicitar uma proposta
+              Conversar sobre seu projeto
             </a>
             <a
               className="border border-outline-variant px-8 py-4 rounded-full font-sans text-sm font-bold uppercase tracking-wider text-center bg-white/70 backdrop-blur-sm hover:bg-surface-container hover:border-scorp-navy/20 transition-all duration-200"

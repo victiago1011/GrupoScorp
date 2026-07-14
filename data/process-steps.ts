@@ -3,27 +3,22 @@ import type { ProcessStep } from "@/types/process";
 export const processSteps: ProcessStep[] = [
   {
     step: 1,
-    title: "Entendemos",
-    description: "Análise profunda dos seus desafios diários e objetivos comerciais de crescimento.",
+    title: "Entendemos seu negócio",
+    description: "Conversamos sobre o que você precisa, como sua empresa funciona e qual resultado faz sentido buscar.",
   },
   {
     step: 2,
-    title: "Planejamos",
-    description: "Definição precisa da arquitetura e das ferramentas ideais para a solução segura do projeto.",
+    title: "Planejamos a melhor solução",
+    description: "Definimos juntos o que será feito, com clareza sobre escopo, prioridades e próximos passos.",
   },
   {
     step: 3,
-    title: "Desenvolvemos",
-    description: "Construção ágil de software com foco absoluto em performance, SEO e segurança de dados.",
+    title: "Desenvolvemos com acompanhamento próximo",
+    description: "Construímos a solução com alinhamentos frequentes, para você acompanhar o andamento sem surpresas.",
   },
   {
     step: 4,
-    title: "Implantamos",
-    description: "Entrega da solução em ambientes de nuvem estáveis e treinamento prático de sua equipe.",
-  },
-  {
-    step: 5,
-    title: "Acompanhamos",
-    description: "Suporte contínuo, correções de segurança e otimização baseada no uso real dos colaboradores.",
+    title: "Entregamos uma solução pronta para evoluir",
+    description: "Colocamos a solução no ar, orientamos o uso e deixamos espaço para melhorias futuras quando fizer sentido.",
   },
 ];
