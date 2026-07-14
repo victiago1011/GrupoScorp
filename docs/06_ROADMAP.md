@@ -1,93 +1,118 @@
 # Roadmap de melhorias
 
 Planejamento em etapas pequenas.  
-**Somente a Etapa 0 está concluída/autorizada neste momento.**  
-Qualquer etapa seguinte exige novo plano no fluxo constitucional e a palavra **`APROVADO`** para aquele escopo.
+Qualquer avanço exige plano no fluxo constitucional e a palavra **`APROVADO`** para o escopo correspondente.
 
 Autoridade máxima: `01_AI_CONSTITUTION.md`.
+
+Decisões comerciais detalhadas da Etapa 2: ver `04_PRODUCT_AND_CONTENT.md` (atualizado na Subetapa 2A).
 
 ---
 
 ## Etapa 0 — Documentação e regras
 
-**Status:** autorizada e executada (criação de `/docs` + README institucional).
+**Status:** concluída.
 
 ### Objetivo
-Estabelecer a Constituição de IA, o posicionamento, o mapa técnico/comercial e as regras do projeto sem alterar o comportamento da aplicação.
+Estabelecer a Constituição de IA, o posicionamento inicial, o mapa técnico/comercial e as regras do projeto sem alterar o comportamento da aplicação.
 
-### Escopo
-- Criar a estrutura aprovada em `/docs`
-- Atualizar `README.md` na raiz
-- Documentar resíduos AI Studio e riscos — sem removê-los
-
-### Critérios de aceite
-- Arquivos `00`–`06` e `99` existentes e coerentes
-- Constituição com fluxo ANÁLISE → … → APROVADO
-- README não é mais o template genérico do AI Studio
-- Nenhum arquivo de aplicação alterado
-
-### Riscos
-- Documentação desalinhada da codebase (mitigado por análise prévia)
-- Confundir “documentado” com “implementado”
-
-### Condição de aprovação
-Palavra `APROVADO` explícita para a Etapa 0 (já concedida para este escopo).
+### Escopo executado
+- Estrutura `/docs`
+- `README.md` institucional
+- Documentação de resíduos AI Studio e riscos
 
 ---
 
 ## Etapa 1 — Arquitetura e limpeza técnica
 
-**Status:** não autorizada.
+**Status:** concluída.
 
 ### Objetivo
-Reduzir o monólito, separar responsabilidades e preparar o código para evolução segura — sem ainda reescrever o posicionamento comercial completo.
+Componentizar a Home preservando aparência e comportamento, preparando base para conteúdo.
 
-### Escopo (proposto; detalhar em plano futuro)
-- Extrair componentes a partir de `app/page.tsx`
-- Separar melhor Server/Client onde fizer sentido
-- Isolar ou preparar remoção do painel demo / seeds do fluxo público
-- Documentar e, se aprovado no plano da etapa, limpar resíduos AI Studio e dependências mortas
-- **Não** incluir formulário de produção completo nesta etapa (salvo se o plano aprovado disser o contrário)
-
-### Critérios de aceite
-- Home equivalente em comportamento visual básico (salvo remoções demo explicitamente aprovadas)
-- Arquivos menores e revisáveis
-- Build do projeto ok
-- Nenhuma mudança de conteúdo comercial ampla fora do escopo aprovado
-
-### Riscos
-- Regressão visual; quebra de âncoras; escopo creeping
-
-### Condição de aprovação
-Novo ciclo completo do fluxo + `APROVADO` específico da Etapa 1.
+### Escopo executado
+- Extração de componentes, `data/`, `types/`
+- `app/page.tsx` como Server Component composto
+- Sem mudança comercial ampla
 
 ---
 
 ## Etapa 2 — Conteúdo e posicionamento
 
-**Status:** não autorizada.
+**Status:** em andamento (somente Subetapa 2A concluída).
 
 ### Objetivo
-Alinhar textos, serviços e cases às regras de `04_PRODUCT_AND_CONTENT.md`.
+Alinhar textos, serviços, estrutura da Home e cases às decisões comerciais aprovadas em `04_PRODUCT_AND_CONTENT.md`.
 
-### Escopo (proposto)
-- Reorganizar serviços: sites, painéis, sob medida complementar
-- Remover ou relabelar cases/métricas fictícias
-- Incluir Corrente do Bem como case real (somente fatos)
-- Corrigir claims absolutos e contatos placeholder
-- Revisar ROI/calculadora para linguagem honestamente ilustrativa ou remover se aprovado
-
-### Critérios de aceite
-- Nenhum case fictício apresentado como real
-- Sem métricas inventadas
-- Tom alinhado ao posicionamento aprovado
-- Contatos apenas com dados verdadeiros aprovados pelo responsável
+### Critérios de aceite (Etapa 2 completa)
+- Posicionamento dual (sites + painéis) refletido na Home
+- Três grupos de serviço; sem catálogo técnico como oferta principal
+- Case real Corrente do Bem só com fatos aprovados
+- Exemplos conceituais rotulados, sem métricas/nomes fictícios
+- ROI e painel Gemini/leads fora da Home pública
+- Contatos só com canais confirmados (omitir se pendente)
+- Sem falsa confirmação de envio de formulário
 
 ### Riscos
-- Lacunas de conteúdo enquanto facts do Corrente do Bem não estiverem confirmados (declarar incertezas)
+- Implementar copy antes de confirmar canais de contato
+- Regressão de âncoras/nav ao remover ROI e inbox
+- Publicar exemplos conceituais com linguagem de case real
 
 ### Condição de aprovação
-`APROVADO` específico da Etapa 2.
+Cada subetapa da Etapa 2 exige `APROVADO` explícito do respectivo escopo.
+
+---
+
+### Subetapa 2A — Decisões comerciais e conteúdo-base
+
+**Status:** concluída (somente documentação).
+
+**Escopo executado:**
+- Registrar posicionamento principal e conceito de apoio
+- Registrar três serviços e o que não é serviço principal
+- Registrar remoção da calculadora de ROI da Home pública (sem alterar código)
+- Registrar retirada do painel de leads, Inbox, Gemini público e localStorage como backend (sem alterar código)
+- Registrar estrutura de portfólio (Corrente do Bem + 2 exemplos conceituais)
+- Registrar fatos aprovados do Corrente do Bem e texto-base
+- Registrar estrutura aprovada da Home
+- Registrar contatos como pendentes de confirmação
+
+**Arquivos alterados nesta subetapa:** `docs/04_PRODUCT_AND_CONTENT.md`, `docs/06_ROADMAP.md`.  
+**Código da aplicação:** não alterado.
+
+**Nota:** `docs/09_DECISIONS.md` **não existe** e **não foi criado** nesta subetapa (criação não autorizada sem aviso prévio).
+
+---
+
+### Subetapa 2B — Hero e serviços
+
+**Status:** não autorizada.
+
+**Objetivo (previsto):** aplicar no código o Hero (mensagem principal + apoio) e os três grupos de serviço; limpar claims problemáticos das seções atuais de soluções/pilares.
+
+---
+
+### Subetapa 2C — Estrutura da Home e remoções públicas
+
+**Status:** não autorizada.
+
+**Objetivo (previsto):** reordenar seções conforme estrutura 2A; remover ROI e painel/Inbox/Gemini do fluxo público da Home; ajustar navegação e footer; tratar formulário sem falsa confirmação de envio (envio real = Etapa 3).
+
+---
+
+### Subetapa 2D — Portfólio e case real
+
+**Status:** não autorizada.
+
+**Objetivo (previsto):** substituir HealthHub/LexFlow/ImobiView; destacar Corrente do Bem com fatos aprovados; incluir dois exemplos conceituais rotulados sem métricas.
+
+---
+
+### Subetapa 2E — Revisão final de credibilidade
+
+**Status:** não autorizada.
+
+**Objetivo (previsto):** varredura de claims, contatos (omitir pendentes), metadata alinhada, build/lint e checklist de credibilidade.
 
 ---
 
@@ -102,8 +127,8 @@ Substituir o fluxo demonstrativo por um canal de contato real e responsável.
 - Envio real (e-mail/CRM/serviço aprovado)
 - Validação server-side
 - Avisos de privacidade / LGPD mínimos acordados
-- Remoção da falsa confirmação baseada só em `localStorage`
-- Remoção ou restrição forte do painel público e da API Gemini exposta
+- Remoção definitiva de persistência inadequada de leads no client
+- Gemini apenas se houver área interna autenticada aprovada
 
 ### Critérios de aceite
 - Lead chega a um destino real controlado
@@ -111,11 +136,8 @@ Substituir o fluxo demonstrativo por um canal de contato real e responsável.
 - Sem promessa operacional falsa
 - Segredos não expostos
 
-### Riscos
-- Escolha inadequada de provedor; spam; compliance incompleto
-
 ### Condição de aprovação
-`APROVADO` específico da Etapa 3 (incluindo decisões de integração).
+`APROVADO` específico da Etapa 3.
 
 ---
 
@@ -125,20 +147,6 @@ Substituir o fluxo demonstrativo por um canal de contato real e responsável.
 
 ### Objetivo
 Melhorar hierarquia visual, experiência mobile e acessibilidade sem perder clareza comercial.
-
-### Escopo (proposto)
-- Revisão do primeiro viewport e seções (uma função por seção)
-- Ajustes mobile
-- Foco em teclado, labels, modais, contraste
-- Motion com propósito; respeito a preferências do usuário quando aplicável
-
-### Critérios de aceite
-- Uso coherente em desktop e mobile
-- Problemas graves de a11y do escopo aprovado corrigidos
-- Branding alinhado às diretrizes de conteúdo (sem claims falsos)
-
-### Riscos
-- Refino estético infinito; regressão de layout
 
 ### Condição de aprovação
 `APROVADO` específico da Etapa 4.
@@ -152,21 +160,6 @@ Melhorar hierarquia visual, experiência mobile e acessibilidade sem perder clar
 ### Objetivo
 Preparar o site para publicação responsável.
 
-### Escopo (proposto)
-- Metadata/OG, sitemap/robots conforme plano
-- Headers e endurecimento de segurança
-- Checklist de produção
-- Remoção definitiva de demos inadequadas
-- README operacional sem expor segredos
-
-### Critérios de aceite
-- Checklist de produção aprovado atendido
-- Sem demos perigosas no ar
-- SEO básico coerente com conteúdo verdadeiro
-
-### Riscos
-- Publicar cedo demais; configurações de hospedagem incompletas
-
 ### Condição de aprovação
 `APROVADO` específico da Etapa 5.
 
@@ -174,10 +167,10 @@ Preparar o site para publicação responsável.
 
 ## Regra geral do roadmap
 
-Avançar de etapa **só** com:
+Avançar de etapa ou subetapa **só** com:
 
-1. Plano no formato constitucional;
+1. Plano no formato constitucional (quando aplicável);
 2. Escopo explícito;
-3. Resposta exata `APROVADO` para aquela etapa.
+3. Resposta exata `APROVADO` para aquele escopo.
 
-Conclusão da Etapa 0 **não** autoriza a Etapa 1.
+Conclusão de uma subetapa **não** autoriza a seguinte automaticamente.
