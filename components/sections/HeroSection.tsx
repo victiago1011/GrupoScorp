@@ -1,30 +1,20 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Cpu, Sparkles } from "lucide-react";
+import { BarChart3, Globe } from "lucide-react";
 
 export function HeroSection() {
   return (
     <section className="pt-32 pb-20 md:pt-48 md:pb-32 px-6 overflow-hidden relative bg-gradient-to-b from-surface-container-low/50 to-background">
       <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-8 space-y-6">
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3 py-1 bg-scorp-navy/5 rounded-full text-scorp-navy font-sans text-[11px] font-bold uppercase tracking-wider"
-          >
-            <Sparkles className="w-3.5 h-3.5 text-scorp-navy animate-pulse" />
-            <span>Editorial Intelligence & Tecnologia Sob Medida</span>
-          </motion.div>
-
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-scorp-navy leading-[1.1] tracking-tight max-w-4xl"
           >
-            Tecnologia que ajuda sua empresa a vender mais, organizar melhor e tomar decisões com confiança.
+            Sites profissionais e painéis de gestão para empresas que querem crescer com mais organização e clareza.
           </motion.h1>
 
           <motion.p
@@ -33,7 +23,7 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="font-sans text-lg md:text-xl text-on-surface-muted font-light leading-relaxed max-w-2xl"
           >
-            Desenvolvemos sites, automações e painéis de dados sob medida para pequenas e médias empresas que buscam resultados reais.
+            Sua empresa mais profissional por fora e mais organizada por dentro.
           </motion.p>
 
           <motion.div
@@ -69,43 +59,40 @@ export function HeroSection() {
             <div className="relative z-10">
               <div className="flex justify-between items-start mb-6">
                 <div className="bg-white/10 p-2.5 rounded-xl backdrop-blur-md">
-                  <Cpu className="w-6 h-6 text-accent-glow" />
+                  <Globe className="w-6 h-6 text-accent-glow" />
                 </div>
-                <span className="text-[10px] uppercase tracking-widest bg-emerald-500/20 text-emerald-300 font-bold px-2 py-0.5 rounded-full border border-emerald-500/30">
-                  Sistemas Ativos
+                <span className="text-[10px] uppercase tracking-widest bg-white/10 text-slate-200 font-bold px-2 py-0.5 rounded-full border border-white/15">
+                  Sites e painéis
                 </span>
               </div>
-              <h3 className="font-display text-xl font-bold tracking-tight mb-2">Engenharia Digital</h3>
+              <h3 className="font-display text-xl font-bold tracking-tight mb-2">Presença profissional</h3>
               <p className="text-xs text-slate-300 font-light leading-relaxed">
-                Sua operação traduzida em código performático e interfaces que seus funcionários amam usar.
+                Um site claro para apresentar sua empresa e gerar confiança no primeiro contato.
               </p>
             </div>
 
-            <div className="relative z-10 space-y-3 pt-6 border-t border-white/10">
-              <div className="flex items-center justify-between text-[11px] text-slate-400">
-                <span>Performance Web</span>
-                <span className="text-accent-glow font-bold">99/100</span>
+            <div className="relative z-10 space-y-4 pt-6 border-t border-white/10">
+              <div className="flex items-start gap-3">
+                <div className="bg-white/10 p-2 rounded-lg shrink-0">
+                  <BarChart3 className="w-4 h-4 text-accent-glow" />
+                </div>
+                <div>
+                  <p className="text-[11px] font-bold text-white tracking-tight">Indicadores claros</p>
+                  <p className="text-[11px] text-slate-300 font-light leading-relaxed mt-0.5">
+                    Painéis de gestão para organizar vendas, faturamento e metas.
+                  </p>
+                </div>
               </div>
-              <div className="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
-                <motion.div
-                  initial={{ width: 0 }}
-                  animate={{ width: "99%" }}
-                  transition={{ duration: 1.2, delay: 0.6 }}
-                  className="bg-accent-glow h-full rounded-full"
-                />
-              </div>
-
-              <div className="flex items-center justify-between text-[11px] text-slate-400 pt-1">
-                <span>Tarefas Automatizadas</span>
-                <span className="text-accent-glow font-bold">100%</span>
-              </div>
-              <div className="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
-                <motion.div
-                  initial={{ width: 0 }}
-                  animate={{ width: "100%" }}
-                  transition={{ duration: 1.2, delay: 0.8 }}
-                  className="bg-accent-glow h-full rounded-full"
-                />
+              <div className="flex items-start gap-3">
+                <div className="bg-white/10 p-2 rounded-lg shrink-0">
+                  <Globe className="w-4 h-4 text-accent-glow" />
+                </div>
+                <div>
+                  <p className="text-[11px] font-bold text-white tracking-tight">Mais organização</p>
+                  <p className="text-[11px] text-slate-300 font-light leading-relaxed mt-0.5">
+                    Informação reunida para acompanhar o negócio com mais clareza.
+                  </p>
+                </div>
               </div>
             </div>
 

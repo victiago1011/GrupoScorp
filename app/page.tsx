@@ -2,7 +2,6 @@ import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { ContactAndLeadsSection } from "@/components/sections/ContactAndLeadsSection";
 import { HeroSection } from "@/components/sections/HeroSection";
-import { PillarsSection } from "@/components/sections/PillarsSection";
 import { PortfolioSection } from "@/components/sections/PortfolioSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { RoiCalculatorSection } from "@/components/sections/RoiCalculatorSection";
@@ -15,7 +14,6 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <SolutionsSection />
-        <PillarsSection />
         <RoiCalculatorSection />
         <ProcessSection />
         <PortfolioSection />
